@@ -8,7 +8,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const PORT = process.env.PORT
 
 app.use(cors({
-  origin:["http://localhost:5173", "https://edukaann.netlify.app"],
+  origin:["http://localhost:5173"],
   credentials:true
 }))
 
