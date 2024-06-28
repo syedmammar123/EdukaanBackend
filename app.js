@@ -5,12 +5,14 @@ const env = require('dotenv');
 env.config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+app.use(cors())
+
 const PORT = process.env.PORT
 
-app.use(cors({
-  origin:["http://localhost:5173"],
-  credentials:true
-}))
+// app.use(cors({
+//   origin:["http://localhost:5173"],
+//   credentials:true
+// }))
 
 
 app.get('/config', (req, res) => {
